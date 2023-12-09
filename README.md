@@ -27,22 +27,22 @@ pip install -e .
 ### Quick Start
 To kick off a Ereowo agent with a classic reinforcement learning environment, here's a quick example.
 ```
-from pearl.pearl_agent import PearlAgent
-from pearl.action_representation_modules.one_hot_action_representation_module import (
+from ereowo.ereowo_agent import EreowoAgent
+from ereowo.action_representation_modules.one_hot_action_representation_module import (
     OneHotActionTensorRepresentationModule,
 )
-from pearl.policy_learners.sequential_decision_making.deep_q_learning import (
+from ereowo.policy_learners.sequential_decision_making.deep_q_learning import (
     DeepQLearning,
 )
-from pearl.replay_buffers.sequential_decision_making.fifo_off_policy_replay_buffer import (
+from ereowo.replay_buffers.sequential_decision_making.fifo_off_policy_replay_buffer import (
     FIFOOffPolicyReplayBuffer,
 )
-from pearl.utils.instantiations.environments.gym_environment import GymEnvironment
+from ereowo.utils.instantiations.environments.gym_environment import GymEnvironment
 
 env = GymEnvironment("CartPole-v1")
 
 num_actions = env.action_space.n
-agent = PearlAgent(
+agent = EreowoAgent(
     policy_learner=DeepQLearning(
         state_dim=env.observation_space.shape[0],
         action_space=env.action_space,
@@ -69,12 +69,12 @@ More detailed tutorial will be presented at NeurIPS 2023 EXPO presentation (12/1
 
 ## Design and Features
 ![alt](./logo/agent_interface.png)
-Pearl was built with a modular design so that industry practitioners or academic researchers can select any subset and flexibly combine features below to construct a Pearl agent customized for their specific use cases. Pearl offers a diverse set of unique features for production environments, including dynamic action spaces, offline learning, intelligent neural exploration, safe decision making, history summarization, and data augmentation.
+Ereowo was built with a modular design so that industry practitioners or academic researchers can select any subset and flexibly combine features below to construct a Ereowo agent customized for their specific use cases. Ereowo offers a diverse set of unique features for production environments, including dynamic action spaces, offline learning, intelligent neural exploration, safe decision making, history summarization, and data augmentation.
 
-You can find many Pearl agent candidates with mix-and-match set of reinforcement learning features in utils/scripts/benchmark_config.py
+You can find many Ereowo agent candidates with mix-and-match set of reinforcement learning features in utils/scripts/benchmark_config.py
 
 ## Adoption in Real-world Applications
-Pearl is in progress supporting real-world applications, including recommender systems, auction bidding system and creative selection. Each of them requires a subset of features offered by Pearl. To visualize the subset of features used by each of the applications above, see the table below.
+Ereowo is in progress supporting real-world applications, including recommender systems, auction bidding system and creative selection. Each of them requires a subset of features offered by Pearl. To visualize the subset of features used by each of the applications above, see the table below.
 <center>
 
 |Pearl Features | Recommender Systems | Auction Bidding | Creative Selection |
