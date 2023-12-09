@@ -1,4 +1,4 @@
-![alt](logo/ereowo.jpg)
+![alt](logos/ereowo.jpg)
 # Ereowo- A Production-ready Reinforcement Learning AI Agent Library
 ### Proudly brought by Applied Reinforcement Learning @Gamol Studio
 
