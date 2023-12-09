@@ -1,6 +1,6 @@
 ![alt](./logo/pearl_long.png)
 # Ereowo- A Production-ready Reinforcement Learning AI Agent Library
-### Proudly brought by Applied Reinforcement Learning @ Gamol Studio
+### Proudly brought by Applied Reinforcement Learning @Gamol Studio
 
 - v0.1 - Ereowo beta-version is now released!
 
@@ -19,7 +19,7 @@ Ereowo is a new production-ready Reinforcement Learning AI agent library open-so
 ### Installation
 To install Ereowo, you can simply clone this repo and pip install
 ```
-git clone https://github.com/facebookresearch/Pearl.git
+git clone https://github.com/Engrgit/Erewo.git
 cd Ereowo
 pip install -e .
 ```
